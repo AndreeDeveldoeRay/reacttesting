@@ -1,0 +1,28 @@
+// @Author: Andreee "DevelDoe" Ray
+// @Date:   2017-02-20T13:54:23+01:00
+// @Email:  me@andreeray.se
+// @Filename: app.scss
+// @Last modified by:   Andreee "DevelDoe" Ray
+// @Last modified time: 2017-02-22T21:06:45+01:00
+
+@import 'base/variables';
+@import 'components/top-bar';
+
+body{
+    font-weight: 300;
+    letter-spacing: $letter-spacing;
+    font-size: $font-size;
+}
+*:focus {
+    outline: none;
+}
+p {
+    color: #252525
+}
+a {
+    color: #fff;
+    font-weight: 400;
+}
+a:hover{
+    color:#9cdbf5;
+}

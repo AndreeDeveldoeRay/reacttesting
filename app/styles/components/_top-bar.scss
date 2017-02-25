@@ -1,0 +1,21 @@
+/**
+* @Author: Andreee "DevelDoe" Ray
+* @Date:   2017-02-22T16:07:18+01:00
+* @Email:  me@andreeray.se
+* @Filename: _top-bar.css
+// @Last modified by:   andreeray
+// @Last modified time: 2017-02-25T23:19:52+01:00
+*/
+.top-bar, .top-bar ul  {
+    background: $topbar-background;
+}
+.top-bar {
+    .menu-text {
+        color: #fff;
+        font-weight: 300;
+    }
+    .menu > .menu-text > a{
+        display: inline;
+        padding: 0;
+    }
+}
