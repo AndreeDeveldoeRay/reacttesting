@@ -4,7 +4,7 @@
 * @Email:  me@andreeray.se
 * @Filename: Main.jsx
 * @Last modified by:   andreeray
-* @Last modified time: 2017-02-26T15:17:01+01:00
+* @Last modified time: 2017-02-26T15:33:30+01:00
 */
 
 
@@ -17,7 +17,6 @@ var Main = (props) => {
         <TopBar/>
         <div className="row">
             <div className="column small-centered medium-6 large-4">
-
                 {props.children}
             </div>
         </div>
