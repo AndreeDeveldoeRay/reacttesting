@@ -1,3 +1,14 @@
+/**
+* @Author: Andreee "DevelDoe" Ray <andreeray>
+* @Date:   2017-02-20T13:54:23+01:00
+* @Email:  me@andreeray.se
+* @Filename: webpack.config.js
+* @Last modified by:   andreeray
+* @Last modified time: 2017-02-26T03:14:06+01:00
+*/
+
+
+
 var webpack = require('webpack')
 
 module.exports = {
@@ -22,9 +33,11 @@ module.exports = {
     resolve: {
         root: __dirname,
         alias: {
-            Main:   'app/components/Main',
-            TopBar: 'app/components/parts/TopBar',
-            styles: 'app/styles/app.scss'
+            Main:       'app/components/Main',
+            TopBar:     'app/components/parts/TopBar',
+            Timer:      'app/components/pages/timer/Timer',
+            CountDown:  'app/components/pages/countdown/CountDown',
+            styles:     'app/styles/app.scss'
         },
         extensions: ['','.js','.jsx']
     },
