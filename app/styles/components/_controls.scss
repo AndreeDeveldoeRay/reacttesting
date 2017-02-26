@@ -1,0 +1,20 @@
+// @Author: Andreee "DevelDoe" Ray <andreeray>
+// @Date:   2017-02-26T21:38:18+01:00
+// @Email:  me@andreeray.se
+// @Filename: _controls.scss
+// @Last modified by:   andreeray
+// @Last modified time: 2017-02-26T21:41:31+01:00
+
+
+
+.controls {
+    display: flex;
+    justify-content: center;
+
+    .button {
+        padding: .75rem 3rem;
+    }
+    .button:first-child {
+        margin-right: 1.5rem
+    }
+}

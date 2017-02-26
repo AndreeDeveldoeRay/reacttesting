@@ -4,12 +4,12 @@
 * @Email:  me@andreeray.se
 * @Filename: parent.jsx
 * @Last modified by:   andreeray
-* @Last modified time: 2017-02-26T16:40:45+01:00
+* @Last modified time: 2017-02-26T21:33:51+01:00
 */
 
 
 
-var React = require('react'), Clock = require('Clock'), CountdownInput = require('CountdownInput')
+var React = require('react'), Clock = require('Clock'), CountdownInput = require('CountdownInput'), Controls = require('Controls')
 
 var Countdown = React.createClass({
     getInitialState: function ()
@@ -27,6 +27,12 @@ var Countdown = React.createClass({
                 case 'started' :
                     this.startTimer()
                     break
+                case 'stoped' :
+                    this.setState({count:0})
+                case 'paused' :
+                    clearInterval(this.timer)
+                    this.timer = undefined
+                    break;
             }
         }
     },
@@ -36,7 +42,6 @@ var Countdown = React.createClass({
             this.setState({
                 count: newCount >= 0 ? newCount : 0
             })
-            console.log("interval")
         }, 1000)
     },
     handleSetCountdown: function (seconds)
@@ -46,12 +51,27 @@ var Countdown = React.createClass({
             countdownStatus: 'started'
         })
     },
+    handleStatusChange: function (newStatus)
+    {
+        this.setState({countdownStatus:newStatus})
+    },
     render: function ()
     {
-        var {count} = this.state
+        var {count,countdownStatus} = this.state
+        var renderControlArea = () =>
+        {
+            if (countdownStatus !== 'stopped')
+            {
+                return <Controls countdownStatus={countdownStatus} onStatusChange={this.handleStatusChange}/>
+            }
+            else
+            {
+                return <CountdownInput onSetCountdown={this.handleSetCountdown}/>
+            }
+        }
         return (<div>
             <Clock totalSeconds={count}/>
-            <CountdownInput onSetCountdown={this.handleSetCountdown}/>
+            {renderControlArea()}
         </div>)
     }
 })
