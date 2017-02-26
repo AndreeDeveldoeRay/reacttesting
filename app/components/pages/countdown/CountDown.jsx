@@ -4,7 +4,7 @@
 * @Email:  me@andreeray.se
 * @Filename: parent.jsx
 * @Last modified by:   andreeray
-* @Last modified time: 2017-02-26T22:45:55+01:00
+* @Last modified time: 2017-02-26T23:06:03+01:00
 */
 
 
@@ -76,6 +76,7 @@ var Countdown = React.createClass({
             }
         }
         return (<div>
+            <h2 className="page-title">Countdown App</h2>
             <Clock totalSeconds={count}/>
             {renderControlArea()}
         </div>)

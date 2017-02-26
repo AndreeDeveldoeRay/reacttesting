@@ -3,12 +3,13 @@
 // @Email:  me@andreeray.se
 // @Filename: app.scss
 // @Last modified by:   andreeray
-// @Last modified time: 2017-02-26T21:38:30+01:00
+// @Last modified time: 2017-02-26T23:03:27+01:00
 
 @import 'base/variables';
 @import 'components/top-bar';
 @import 'components/clock';
 @import 'components/controls';
+@import 'components/page-title';
 
 body{
     font-weight: 300;

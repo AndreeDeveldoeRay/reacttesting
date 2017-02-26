@@ -4,7 +4,7 @@
 * @Email:  me@andreeray.se
 * @Filename: Countdown.test.jsx
 * @Last modified by:   andreeray
-* @Last modified time: 2017-02-26T17:08:59+01:00
+* @Last modified time: 2017-02-26T23:00:48+01:00
 */
 
 
@@ -37,6 +37,28 @@ describe('Countdown', () =>
                 expect(countdown.state.count).toBe(0)
                 done()
             }, 3000)
+        })
+        it('Should pause countdown on paused status', (done) =>
+        {
+            var countdown = TestUtils.renderIntoDocument(<Countdown/>)
+            countdown.handleSetCountdown(3)
+            countdown.handleStatusChange('paused')
+            setTimeout( () => {
+                expect(countdown.state.count).toBe(3)
+                expect(countdown.state.countdownStatus).toBe('paused')
+                done()
+            }, 1001)
+        })
+        it('Should stop countdown on stopped status', (done) =>
+        {
+            var countdown = TestUtils.renderIntoDocument(<Countdown/>)
+            countdown.handleSetCountdown(3)
+            countdown.handleStatusChange('stopped')
+            setTimeout( () => {
+                expect(countdown.state.count).toBe(0)
+                expect(countdown.state.countdownStatus).toBe('stopped')
+                done()
+            }, 1001)
         })
     })
 })
