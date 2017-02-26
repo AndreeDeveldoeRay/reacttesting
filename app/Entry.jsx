@@ -4,7 +4,7 @@
 * @Email:  me@andreeray.se
 * @Filename: Entry.jsx
 * @Last modified by:   andreeray
-* @Last modified time: 2017-02-26T03:16:41+01:00
+* @Last modified time: 2017-02-26T14:57:00+01:00
 */
 
 var React                                       = require('react'),
@@ -12,7 +12,7 @@ var React                                       = require('react'),
     Main                                        = require('Main'),
     TopBar                                      = require('TopBar'),
     Timer                                       = require('Timer'),
-    CountDown                                   = require('CountDown'),
+    Countdown                                   = require('Countdown'),
     {
         Route,
         Router,
@@ -31,7 +31,7 @@ ReactDOM.render(
     <Router history={hashHistory}>
         <Route path="/" component={Main}>
             <IndexRoute component={Timer}/>
-            <Route path="/countdown" component={CountDown}/>
+            <Route path="/countdown" component={Countdown}/>
         </Route>
     </Router>,
     document.getElementById('app')

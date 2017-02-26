@@ -3,8 +3,8 @@
 * @Date:   2017-02-20T13:54:23+01:00
 * @Email:  me@andreeray.se
 * @Filename: Main.jsx
-* @Last modified by:   Andreee "DevelDoe" Ray
-* @Last modified time: 2017-02-22T16:06:14+01:00
+* @Last modified by:   andreeray
+* @Last modified time: 2017-02-26T15:17:01+01:00
 */
 
 
@@ -13,16 +13,15 @@ var React  = require('react'),
     TopBar = require('TopBar')
 
 var Main = (props) => {
-    return (
-        <div className="component" id="main">
-            <div>
-                <div>
-                    <TopBar/>
-                    {props.children}
-                </div>
+    return (<div className="component" id="main">
+        <TopBar/>
+        <div className="row">
+            <div className="column small-centered medium-6 large-4">
+
+                {props.children}
             </div>
         </div>
-    )
+    </div>)
 }
 
 module.exports = Main

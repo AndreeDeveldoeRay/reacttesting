@@ -4,7 +4,7 @@
 * @Email:  me@andreeray.se
 * @Filename: webpack.config.js
 * @Last modified by:   andreeray
-* @Last modified time: 2017-02-26T03:38:36+01:00
+* @Last modified time: 2017-02-26T15:11:50+01:00
 */
 
 
@@ -37,7 +37,8 @@ module.exports = {
             TopBar:     'app/components/parts/TopBar',
             Clock:      'app/components/parts/Clock',
             Timer:      'app/components/pages/timer/Timer',
-            CountDown:  'app/components/pages/countdown/CountDown',
+            Countdown:  'app/components/pages/countdown/Countdown',
+            CountdownInput: 'app/components/pages/countdown/CountdownInput',
             styles:     'app/styles/app.scss'
         },
         extensions: ['','.js','.jsx']
