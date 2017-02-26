@@ -4,7 +4,7 @@
 * @Email:  me@andreeray.se
 * @Filename: parent.jsx
 * @Last modified by:   andreeray
-* @Last modified time: 2017-02-26T21:33:51+01:00
+* @Last modified time: 2017-02-26T22:45:55+01:00
 */
 
 
@@ -27,14 +27,19 @@ var Countdown = React.createClass({
                 case 'started' :
                     this.startTimer()
                     break
-                case 'stoped' :
+                case 'stopped' :
                     this.setState({count:0})
                 case 'paused' :
                     clearInterval(this.timer)
                     this.timer = undefined
-                    break;
+                    break
             }
         }
+    },
+    componentWillUnmount: function ()
+    {
+        clearInterval(this.timer)
+        this.timer = undefined
     },
     startTimer: function () {
         this.timer = setInterval(()=>{
@@ -42,6 +47,7 @@ var Countdown = React.createClass({
             this.setState({
                 count: newCount >= 0 ? newCount : 0
             })
+            if (newCount === 0) this.setState({countdownStatus: 'stopped'})
         }, 1000)
     },
     handleSetCountdown: function (seconds)
