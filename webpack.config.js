@@ -4,7 +4,7 @@
 * @Email:  me@andreeray.se
 * @Filename: webpack.config.js
 * @Last modified by:   andreeray
-* @Last modified time: 2017-02-26T03:14:06+01:00
+* @Last modified time: 2017-02-26T03:38:36+01:00
 */
 
 
@@ -35,6 +35,7 @@ module.exports = {
         alias: {
             Main:       'app/components/Main',
             TopBar:     'app/components/parts/TopBar',
+            Clock:      'app/components/parts/Clock',
             Timer:      'app/components/pages/timer/Timer',
             CountDown:  'app/components/pages/countdown/CountDown',
             styles:     'app/styles/app.scss'

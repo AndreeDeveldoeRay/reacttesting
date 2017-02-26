@@ -1,0 +1,25 @@
+// @Author: Andreee "DevelDoe" Ray <andreeray>
+// @Date:   2017-02-26T04:10:52+01:00
+// @Email:  me@andreeray.se
+// @Filename: _clock.scss
+// @Last modified by:   andreeray
+// @Last modified time: 2017-02-26T04:15:51+01:00
+
+
+
+.clock {
+    align-items: center;
+    background-color: $clock-bg-color;
+    border: 2px solid $clock-border-color;
+    border-radius: 50%;
+    display: flex;
+    height: 14rem;
+    justify-content: center;
+    margin: 4rem auto;
+    width: 14rem;
+}
+.clock-text {
+    color: $clock-text-color;
+    font-size: 2.25rem;
+    font-weight: 300;
+}
