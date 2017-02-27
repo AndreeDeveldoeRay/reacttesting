@@ -4,7 +4,7 @@
 * @Email:  me@andreeray.se
 * @Filename: Controls.jsx
 * @Last modified by:   andreeray
-* @Last modified time: 2017-02-26T22:44:03+01:00
+* @Last modified time: 2017-02-27T01:08:38+01:00
 */
 
 
@@ -30,7 +30,7 @@ var Controls = React.createClass({
             {
                 return <button className="button secondary" onClick={this.onStatusChange('paused')}>Pause</button>
             }
-            else if (countdownStatus === 'paused')
+            else
             {
                 return <button className="button primary" onClick={this.onStatusChange('started')}>Start</button>
             }
